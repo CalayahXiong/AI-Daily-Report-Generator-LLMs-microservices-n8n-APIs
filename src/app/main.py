@@ -1,4 +1,5 @@
 import os
+from typing import Optional
 
 from fastapi import FastAPI
 from agent import run_agent, fetch_github_updates, fetch_db_updates, fetch_notion_updates
@@ -12,12 +13,12 @@ app = FastAPI()
 class InputData(BaseModel):
     task:  str = "Daily project summary"
     custom_prompt: str = "Summarize and highlight key updates from all resources."
-    github_repo: str
-    db: str
-    notion: str
+    github_repo: Optional[str] = None
+    db: Optional[str] = None
+    notion: Optional[str] = None
 
 
-@app.post("/daily report")
+@app.post("/daily_report")
 def daily_report(data: InputData):
 
     github_summary = fetch_github_updates(data.github_repo) if data.github_repo else ""
@@ -28,11 +29,11 @@ def daily_report(data: InputData):
 
     report_summary = run_agent(task=combined_report, custom_prompt=data.custom_prompt)
 
-    send_daily_report_by_email(report_summary, recipient=[
-        "mina@gmail.com",
-        "jennie@gmail.com",
-        "jeonghan@gmail.com"
-    ])
+    # send_daily_report_by_email(report_summary, recipients=[
+    #     "mina@gmail.com",
+    #     "jennie@gmail.com",
+    #     "jeonghan@gmail.com"
+    # ])
 
     return {"response": report_summary}
 

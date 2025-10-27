@@ -13,7 +13,7 @@ def call_custom_api(input_text: str) -> str:
     """
     try:
         r = requests.post(
-            "http://api:8000/process",
+            "http://api:8000/daily_report",
             json={"task": input_text}
         )
         r.raise_for_status()
