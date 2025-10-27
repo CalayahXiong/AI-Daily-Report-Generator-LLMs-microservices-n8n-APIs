@@ -30,5 +30,6 @@ FastAPI: http://localhost:8000/docs#/default/daily_report_daily_report_post
 <img width="1117" height="485" alt="image" src="https://github.com/user-attachments/assets/9273d46d-48a7-4d40-a07e-ce5c199db049" />
 For the [send_email] node, when trying to send mail via Gmail SMTP in n8n (or any app), use a special App Password: https://myaccount.google.com/apppasswords
 
+The message received:
 <img width="1068" height="389" alt="image" src="https://github.com/user-attachments/assets/97a483f3-e4c7-4414-b3f7-b390b686cc79" />
 
