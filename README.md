@@ -12,10 +12,16 @@ It connects to your data sources (GitHub, Notion, databases, etc.), extracts key
 
 - Workflow Orchestration — coordinate multi-step automation with n8n
 
-- Customizable Reporting — format and deliver results to Slack, email, or dashboards
+- Customizable Reporting — format and deliver results to email, or dashboards
 
 - Extendable Architecture — easily add new data connectors, report styles, or agents
 
 - LLM Flexibility — supports OpenAI, Claude, or Groq models via LangChain
 
 - One-Click Deployment — run locally or in the cloud with Docker Compose
+
+## Presentation
+n8n: http://localhost:5678/
+HTTP post url: http://api:8000/daily_report
+FastAPI: http://localhost:8000/docs#/default/daily_report_daily_report_post
+<img width="1117" height="485" alt="image" src="https://github.com/user-attachments/assets/9273d46d-48a7-4d40-a07e-ce5c199db049" />
