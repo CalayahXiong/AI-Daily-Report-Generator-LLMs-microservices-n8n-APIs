@@ -21,7 +21,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./src/app:/app  # 保证代码同步
+      - ./src/app:/app
     env_file:
       - .env
     restart: always
