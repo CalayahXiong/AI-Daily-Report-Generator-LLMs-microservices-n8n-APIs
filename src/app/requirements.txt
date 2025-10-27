@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+
+pydantic
+
+requests
+
+langchain
+langchain-groq
+langchain-community
+
+anyio
+loguru
